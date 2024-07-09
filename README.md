@@ -1,5 +1,3 @@
-My apologies for the incomplete response. Here is the continuation and completion of the README file.
-
 ```markdown
 # Expense Tracker
 
