@@ -8,7 +8,7 @@
     <artifactId>Expense-Tracker</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Expense-Tracker</name>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,25 +36,16 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.sh0nk</groupId>
-            <artifactId>matplotlib4j</artifactId>
-            <version>0.5.0</version>
-        </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
                 <configuration>
-                    <archive>
-                        <manifestEntries>
-                            <Main-Class>com.src.expensetracker.MainClass</Main-Class> <!-- Adjust MainClass to your entry point -->
-                        </manifestEntries>
-                    </archive>
+                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>
         </plugins>
